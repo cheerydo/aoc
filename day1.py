@@ -16,7 +16,7 @@ def find_duplicate_freq(nums):
 
     return dup_freq
 
-with open("aoc1.txt") as f:
+with open("day1.txt") as f:
     input = [int(x) for x in f.read().splitlines()]
 
     final_freq = sum(input)
