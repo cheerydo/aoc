@@ -4,7 +4,6 @@ def find_duplicate_freq(nums):
     dup_freq = None
 
     while not dup_freq:
-    # Build list of frequencies seen
         for i in nums:
             new_freq = freq + i
             if new_freq in freq_list:
@@ -15,6 +14,7 @@ def find_duplicate_freq(nums):
                 freq_list.add(new_freq)
 
     return dup_freq
+
 
 with open("day1.txt") as f:
     input = [int(x) for x in f.read().splitlines()]
