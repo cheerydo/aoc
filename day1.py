@@ -7,12 +7,10 @@ def find_duplicate_freq(nums):
         for i in nums:
             new_freq = freq + i
             if new_freq in freq_list:
-                dup_freq = new_freq
+                return new_freq
             else:
                 freq = new_freq
                 freq_list.add(new_freq)
-
-    return dup_freq
 
 
 with open("day1.txt") as f:
