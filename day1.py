@@ -1,9 +1,8 @@
 def find_duplicate_freq(nums):
     freq_list = set([0])
     freq = 0
-    dup_freq = None
 
-    while not dup_freq:
+    while True:
         for i in nums:
             new_freq = freq + i
             if new_freq in freq_list:
