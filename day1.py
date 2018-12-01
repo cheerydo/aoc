@@ -8,7 +8,6 @@ def find_duplicate_freq(nums):
             new_freq = freq + i
             if new_freq in freq_list:
                 dup_freq = new_freq
-                break
             else:
                 freq = new_freq
                 freq_list.add(new_freq)
