@@ -4,8 +4,7 @@ with open("day3.txt") as f:
     input = f.read().splitlines()
 
     # Only grab last two words in line and put into list
-    inst_list = [list(inst.split(' ')[2:]) for inst in input]
-    print(inst_list)
+    inst_list = [list(inst.split(' ')) for inst in input]
 
     coords = set()
     dups = set()
@@ -13,10 +12,10 @@ with open("day3.txt") as f:
     r = re.compile(r'[0-9]{1,3}')
 
     for inst in inst_list:
-        xycoords = r.findall(inst[0])
+        xycoords = r.findall(inst[2])
         x, y = [int(i) for i in xycoords]
 
-        ranges = r.findall(inst[1])
+        ranges = r.findall(inst[3])
         loop1, loop2 = [int(i) for i in ranges]
 
         for r1 in range(loop1):
