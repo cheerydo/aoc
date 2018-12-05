@@ -41,7 +41,7 @@ with open("day3.txt") as f:
     # since those are the ids of overlapping territory
     dupes = [fabric[t] for t in fabric if len(fabric[t]) > 1]
 
-    # This next line flattens the list of lists into one list and dedupes it with set()
+    # This next line flattens the list of overlapping ids and dedupes it with set()
     de_dupes = set([int(idn) for series in dupes for idn in series])
 
     # Finally we find the one value missing from our range (since only one id should have 0 overlap)
