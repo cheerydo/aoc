@@ -34,7 +34,7 @@ def find_common_strings(words):
     return ''.join(final_strings[0])
 
 
-with open("day2.txt") as f:
+with open("input/day2.txt") as f:
     input = f.read().splitlines()
 
     twos = 0

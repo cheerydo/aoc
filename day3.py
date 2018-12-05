@@ -1,6 +1,6 @@
 import re
 
-with open("day3.txt") as f:
+with open("input/day3.txt") as f:
     input = f.read().splitlines()
 
     # Only grab last two words in line and put into list
